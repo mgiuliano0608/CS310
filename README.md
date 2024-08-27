@@ -1,2 +1,4 @@
-# CS310
-Repo that will contain my C++ course work
+# CS310 C++
+## Contributors
+* Dr. Robert Flowers
+* Michael Giuliano
