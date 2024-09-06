@@ -11,11 +11,13 @@ int main()
     double sideA, sideB, hypotenuse;
     double radius, circumference;
     
+    // Greeting
     cout << endl << "--------------------------------------------------" << endl;
     cout << "What is your first name? ";
     cin >> name;
     cout << endl << "Hello " << name << "!" << endl;
     
+    // Calculate the hypotenuse of a right triangle
     cout << endl << "Lets calculate the hypotenuse of a right triangle." << endl;
     cout << "Enter the length of side a: ";
     cin >> sideA;
@@ -26,6 +28,7 @@ int main()
     cout << "The hypotenuse of a right triangle with sides " << sideA << " and ";
          << sideB << " is " << hypotenuse << endl;
 
+    // Calculate the circumference of a circle
     cout << endl << "Great! Now lets calculate the circumference of a circle." << endl;
     cout << "Enter the circle's radius: ";
     cin << radius;
