@@ -10,7 +10,7 @@ void displayTitle()
 {
     string title = "SIMPLE FAKE TAX CALCULATOR";
     int bannerWidth = 50;
-    char bannerChar = '-';
+    char bannerChar = "-";
     int titlePadding = (bannerWidth - title.length()) / 2;
     
     cout << setw(bannerWidth) << setfill(bannerChar) << "" << endl;
@@ -24,14 +24,14 @@ int main()
     double taxRate;
     double taxAmount;
 
-    displayTitle();
+    displayTitle()
 
     // Get user input
     cout << "Enter your annual income: ";
     cin >> income;
 
     // Determine tax rate
-    if (income < 0.01)
+    if (income > 0.01)
         taxRate = 0.0;
     else if (income < 15000.0)
         taxRate = 0.12;
