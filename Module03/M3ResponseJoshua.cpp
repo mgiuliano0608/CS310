@@ -8,7 +8,7 @@
     Description: This program is a fun console story about being curious
 */
 
-#include <conio.h>
+// Removed #include <conio.h>
 #include <iostream>
 using namespace std;
 
@@ -17,9 +17,9 @@ int main()
 
     // creating the local variables for the program
     string name;
-    integer selection = 0;
-    integer selection2 = 0;
-    integer selection3 = 0;
+    int selection = 0;      // Changed integer to int
+    int selection2 = 0;     // Changed integer to int
+    int selection3 = 0;     // Changed integer to int
 
     // Displaying the name of the application as well as prompting the user for information.
     cout << "\n\n  Welcome to chasing a Leprechaun!"
@@ -66,7 +66,7 @@ int main()
 
 
     // Ending options
-    if (selection2 == 0 &&&& selection3 == 0 ) {
+    if (selection2 == 0 && selection3 == 0 ) {  // Changed &&&& to &&
         cout << "\n  As you walk away you realize just how hungry you where"
             << "\n  But luckily you see a taco truck no to far away"
             << "\n  MMMMMM tacos... (Insert Homer Simpson mmm donuts gif here)";
@@ -89,7 +89,7 @@ int main()
             << "\n  Your relieved that your getting away ...."
             << "\n  but still feel like somethings trying to tug at you......";
         cout << endl;
-    } else if (selection3 ====== 2) {
+    } else if (selection3 == 2) {  // Changed ====== to ==
         cout << "\n  ...."
             << "\n  ..... ....."
             << "\n  .... ..... ....."
@@ -112,7 +112,8 @@ int main()
     cout << "\n  Thanks for using my program!" << endl;
     cout << "\n\n  Press any key to continue ..." << endl;
 
-    _getch();  // halt processing 
+    // Changed _getch(); to system("read");
+    system("read");  // halt processing 
 
     return 0;  // exit code
 }
