@@ -11,9 +11,9 @@ int main()
     int64_t number;
     bool invalidInput = true;
 
-    cout << endl
-         << "**************************************************" << endl
-         << "**         Decimal to Binary Converter          **" << endl
+    cout << endl;
+         << "**************************************************" << endl;
+         << "**         Decimal to Binary Converter          **" << endl;
          << "**************************************************" << endl << endl;
     
     // Get base 10 number from user
@@ -22,7 +22,7 @@ int main()
         cout << "Enter a number from 0 to " << UINT32_MAX << ": ";
         cin >> number;
 
-        if (number < 0 || number > UINT32_MAX)
+        if (number < 0 | number > UINT32_MAX)
             cout << endl << "Invalid number. Please try again." << endl << endl;
         else
             invalidInput = false;
@@ -47,7 +47,7 @@ uint DetermineMaxPowerOf2(uint num)
 }
 
 // Convert a base 10 number to binary
-string DecimalToBinary(uint num)
+String DecimalToBinary(uint num)
 {
     uint maxPower = DetermineMaxPowerOf2(num);
     string binary (maxPower + 1, '0');
