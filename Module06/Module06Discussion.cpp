@@ -16,7 +16,6 @@ void startGameLoop();
 void getPlayerName();
 void playGame();
 void getPlayerInput();
-void explore();
 void battle();
 string generateEnemyName();
 void pause(int millis);
@@ -45,13 +44,13 @@ void startGameLoop() {
 
     while (isRunning) {
         switch (gameState) {
-            case STARTING:
+            case gameState.STARTING:
                 getPlayerName();
                 break;
-            case PLAYING:
+            case gameState.PLAYING:
                 playGame();
                 break;
-            case QUITTING:
+            case gameState.QUITTING:
                 cout << endl << "Fare thee well!" << endl << endl;
                 isRunning = false;
                 break;
@@ -97,7 +96,7 @@ void getPlayerInput() {
             << "------------" << endl
             << "1) Explore" << endl
             << "2) Quit game" << endl
-            << ">> ";
+            << ">> "
         cin >> option;
 
         if (option == '1')
@@ -109,7 +108,7 @@ void getPlayerInput() {
             invalidOption = true;
         }
 
-    } while(invalidOption);
+    } while(invalidOption)
 }
 
 // The player explores the dungeon and can either find gold, nothing, or encounter an enemy 
